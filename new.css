@@ -1,0 +1,41 @@
+#background-text{
+  position: absolute;
+  width: 25vw;
+  height: fit-content;
+  z-index: 2;
+  display: flexbox;
+  padding: 1vw 2.5vw;
+  background-color: transparent;
+}
+
+#background-text img{
+  width: 60%;
+}
+
+#background-text > *{
+  width: fit-content;
+  color: white;
+  font-family: "Hind", sans-serif;
+}
+
+#background-text h1{
+  margin-bottom: 0;
+  font-size: 64px;
+  font-weight: normal;
+}
+
+#background-text h1 ct{
+  margin-top: 0;
+  font-size: 96px;
+  font-weight: bold;
+}
+
+#background-text h2{
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#background-text h3{
+  font-size: 28px;
+  font-weight: lighter;
+}
