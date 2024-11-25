@@ -1,0 +1,24 @@
+footer{
+  width: 100vw;
+  height: fit-content;
+  z-index: 1;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  position: fixed;
+  top: 87vh;
+}
+
+.blob > svg{
+  height: 13vh;
+  width: 8vw;
+  cursor: pointer;
+  transition: box-shadow 10s ease;
+}
+
+.blob:hover > svg{
+  transition: 500ms;
+  filter: url("#shadowHover")
+}
