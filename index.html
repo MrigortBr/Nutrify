@@ -18,8 +18,8 @@
 </head>
 <body>
   <img onclick="showIndex()" src="./public/svg/logo.svg" alt="" id="logo" attr-show-image="0">
-  <button id="up" onclick="showIndex()" showUp="false">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+  <button id="up" showUp="false">
+    <svg xmlns="http://www.w3.org/2000/svg" onclick="showIndex()" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
     </svg>
     </button>
@@ -191,29 +191,29 @@
     <h1 id="faq-title">Perguntas frequentes</h1>
     <div id="questions">
       <div class="question" onclick="openSpan(this)">
-        <h1 class="question-title">Quanto eu tenho que pagar para poder utilizar o programa?</h1>
+        <h1 class="question-title">O que é a Nutrify?</h1>
         <img class="question-arrow" src="./public/svg/caret.svg" alt="" show="false">
-        <span class="question-desc" show="false">Você não precisa pagar nada para pode utilizar o nutrify</span>
+        <span class="question-desc" show="false">Nutrify é uma rede social que te ajuda a alcançar seus objetivos de saúde e bem-estar através de um acompanhamento nutricional personalizado, receitas deliciosas e uma comunidade de pessoas com os mesmos objetivos.</span>
       </div>
       <div class="question" onclick="openSpan(this)">
-        <h1 class="question-title">Quanto eu tenho que pagar para poder utilizar o programa?</h1>
+        <h1 class="question-title">Qual a diferença entre a Nutrify e outras plataformas?</h1>
         <img class="question-arrow" src="./public/svg/caret.svg" alt="" show="false">
-        <span class="question-desc" show="false">Você não precisa pagar nada para pode utilizar o nutrify</span>
+        <span class="question-desc" show="false">Diferente de outras plataformas, a Nutrify oferece um plano alimentar personalizado criado por um nutricionista, além de ferramentas e recursos exclusivos para te ajudar a monitorar sua alimentação e atividades físicas de forma simples e eficaz. E uma comunidade repleta de usuários em busca do mesmo objetivo.</span>
       </div>
       <div class="question" onclick="openSpan(this)">
-        <h1 class="question-title">Quanto eu tenho que pagar para poder utilizar o programa?</h1>
+        <h1 class="question-title">Como funciona o acompanhamento nutricional?        </h1>
         <img class="question-arrow" src="./public/svg/caret.svg" alt="" show="false">
-        <span class="question-desc" show="false">Você não precisa pagar nada para pode utilizar o nutrify</span>
+        <span class="question-desc" show="false">Ao se cadastrar, você terá acesso a um nutricionista que irá criar um plano alimentar personalizado de acordo com suas necessidades e objetivos. Através da plataforma, você poderá acompanhar seu progresso, tirar dúvidas e receber novas sugestões.</span>
       </div>
       <div class="question" onclick="openSpan(this)">
-        <h1 class="question-title">Quanto eu tenho que pagar para poder utilizar o programa?</h1>
+        <h1 class="question-title">Qual a função da inteligência artificial na plataforma?</h1>
         <img class="question-arrow" src="./public/svg/caret.svg" alt="" show="false">
-        <span class="question-desc" show="false">Você não precisa pagar nada para pode utilizar o nutrify</span>
+        <span class="question-desc" show="false">A inteligência artificial da Nutrify te auxilia na criação de refeições saborosas e nutritivas, com base no seu plano alimentar personalizado. Ela também pode responder a suas dúvidas sobre nutrição e te oferecer dicas para uma vida mais saudável.</span>
       </div>
       <div class="question" onclick="openSpan(this)">
-        <h1 class="question-title">Quanto eu tenho que pagar para poder utilizar o programa?</h1>
+        <h1 class="question-title"> IA substitui o nutricionista?</h1>
         <img class="question-arrow" src="./public/svg/caret.svg" alt="" show="false">
-        <span class="question-desc" show="false">Você não precisa pagar nada para pode utilizar o nutrify</span>
+        <span class="question-desc" show="false">Não, a IA é apenas uma ferramenta para te auxiliar. O nutricionista é responsável por criar o seu plano alimentar e te acompanhar de perto em sua jornada.</span>
       </div>
     </div>
     <ul></ul>
@@ -267,36 +267,32 @@
         <img class="user-picture" src="./public/images/IgorPereira.jpg" alt="">
         <h2 class="user-name">Igor Pereira Lins</h2>
         <p class="user-function">Gerente de projeto</p>
-        <img class="user-linkedin" src="./public/svg/linkedin.svg" alt="">
-        <img class="user-curriculum" src="./public/svg/user.svg" alt="">
+        <img class="user-linkedin" onclick="openPage('https://www.linkedin.com/in/igor-pereira-lins-01a1691a1/')" src="./public/svg/linkedin.svg" alt="">
+        <img class="user-curriculum" onclick="openPage('http://lattes.cnpq.br/3448063622652979')" src="./public/svg/user.svg" alt="">
       </div>
       <div class="user" id="guilherme">
-        <img class="user-picture" src="./public/images/user.jpg" alt="">
+        <img class="user-picture" src="./public/images/Guilherme.jpeg" alt="">
         <h2 class="user-name">Guilherme</h2>
         <p class="user-function">Desenvolvedor</p>
-        <img class="user-linkedin" src="./public/svg/linkedin.svg" alt="">
-        <img class="user-curriculum" src="./public/svg/user.svg" alt="">
+        <img class="user-linkedin" onclick="openPage('https://www.linkedin.com/in/guilherme-vin%C3%ADcius-975a23209/')" src="./public/svg/linkedin.svg" alt="">
       </div>
       <div class="user" id="alan">
-        <img class="user-picture" src="./public/images/user.jpg" alt="">
+        <img class="user-picture" src="./public/images/Alan.jpeg" alt="">
         <h2 class="user-name">Alan</h2>
         <p class="user-function">Designer de UX/UI</p>
-        <img class="user-linkedin" src="./public/svg/linkedin.svg" alt="">
-        <img class="user-curriculum" src="./public/svg/user.svg" alt="">
+        <img class="user-linkedin" onclick="openPage('https://www.linkedin.com/in/alan-mateus-7720512ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app')" src="./public/svg/linkedin.svg" alt="">
       </div>
       <div class="user" id="jaci">
         <img class="user-picture" src="./public/images/jaci.jpeg" alt="">
         <h2 class="user-name">Maria Jaciara</h2>
         <p class="user-function">Analista de testes</p>
-        <img class="user-linkedin" src="./public/svg/linkedin.svg" alt="">
-        <img class="user-curriculum" src="./public/svg/user.svg" alt="">
+        <img class="user-linkedin" onclick="openPage('https://www.linkedin.com/in/maria-jaciara-477993149/')" src="./public/svg/linkedin.svg" alt="">
       </div>
       <div class="user" id="andre">
-        <img class="user-picture" src="./public/images/user.jpg" alt="">
+        <img class="user-picture" src="./public/images/Andre.jpeg" alt="">
         <h2 class="user-name">André</h2>
         <p class="user-function">Analista de requisitos</p>
-        <img class="user-linkedin" src="./public/svg/linkedin.svg" alt="">
-        <img class="user-curriculum" src="./public/svg/user.svg" alt="">
+        <img class="user-linkedin" onclick="openPage('https://www.linkedin.com/in/andre-felipe-28828b33a/')" src="./public/svg/linkedin.svg" alt="">
       </div>
     </div>
   </main>

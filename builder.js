@@ -85,6 +85,8 @@ function openSpan(element) {
     element.querySelector(".question-desc").setAttribute("show", "true")
     element.querySelector(".question-arrow").setAttribute("show", "true")
   }
+}
 
-
+function openPage(url) {
+  window.open(url, '_blank');
 }
