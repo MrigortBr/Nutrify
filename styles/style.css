@@ -18,8 +18,8 @@
 #up{
   position: absolute;
   height: 5vh;
-  z-index: 2;
-  top: 90vh;
+  z-index: 3;
+  top: 80vh;
   left: 95vw;
   border-radius: 50%;
   background-color: #02542D;
