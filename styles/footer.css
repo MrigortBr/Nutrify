@@ -40,8 +40,7 @@ footer{
   footer{
     display: flex;
     justify-content: center;
-    top: 90vh;
-    height: 100%;
+    top: 20vh;
     align-items: center;
     height: 16vw;
   }
