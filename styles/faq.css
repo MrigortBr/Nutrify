@@ -29,6 +29,7 @@
   grid-template-columns: 100%;
   grid-template-rows: repeat(1fr, 5);
   overflow: auto;
+  z-index: 3;
 }
 
 .question{
