@@ -2,7 +2,7 @@
 footer{
   width: 100vw;
   height: fit-content;
-  z-index: 1;
+  z-index: 3;
   margin: auto;
   display: flex;
   align-items: center;
