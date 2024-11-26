@@ -2,6 +2,8 @@ let page = 1;
 
 window.addEventListener("resize", () => {sendToPage()})
 
+showTeam()
+
 document.addEventListener("wheel", (event) => {
   if (event.deltaY > 0) {
     if(page < 4) page++;
