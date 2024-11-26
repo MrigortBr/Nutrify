@@ -13,7 +13,7 @@ footer{
 }
 
 .blob > svg{
-  /* height: 13vh; */
+  height: 13vh;
   width: 8vw;
   cursor: pointer;
   transition: box-shadow 10s ease;

@@ -18,31 +18,100 @@
 }
 
 #content-div{
-  height: 55vh;
+  height: 70%;
   width: 70vw;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 48% 48%;
-  grid-column-gap: 1%;
-  grid-row-gap: 2%;
-  grid-template-rows: 48% 48%;
+  grid-template-columns: 10% 80% 10%;
 }
 
-.content-benefits{
-  height: 90%;
-  width: 80%;
-  border-radius: 20px;
-  color: rgb(95, 95, 95, 0.84);
-  font-weight: bold;
+
+.content-benefits[show-this="false"]{
+  display: none;
+}
+
+.bi-caret-down-fill{
+  width: 50%;
+  height: fit-content;
+  padding: 1%;
+  background-color: #02542D;
+  fill: white;
+  border-radius: 50%;
+  margin: auto;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+
+#arrow-left{
+  transform: rotate(90deg);
+  margin-left: auto;
+  margin-right: 0;
+}
+
+#arrow-right{
+  transform: rotate(-90deg);
+  margin-left: 0;
+  margin-right: auto;
+}
+
+#carrousel{
+  display: flex;
+  flex-wrap: nowrap;
+  height: 80%;
+  width: 90%;
+  margin: auto;
   -webkit-box-shadow: 0px 0px 4px 9px rgba(142,142,142,0.54);
   -moz-box-shadow: 0px 0px 4px 9px rgba(142,142,142,0.54);
   box-shadow: 0px 0px 4px 9px rgba(142,142,142,0.54);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
+  border-radius: 20px;
 }
 
-.content-benefits h2{
-  height: fit-content;
+.content-benefits{
+  height: 100%;
+  width: 100%;
+  color: rgb(95, 95, 95, 0.84);
+  display: grid;
+  grid-template-rows: 30% 70%;
+  padding: 1%;
+  transition: 500ms;
+  user-select: none; /* CSS moderno */
+  -webkit-user-select: none; /* Suporte para navegadores WebKit */
+  -ms-user-select: none; /* Suporte para Internet Explorer/Edge */
+}
+
+
+.content-benefits-title{
+  font-weight: bolder;
+  color: black;
+}
+
+.content-benefits-paragraph{
+  font-weight: lighter;
+}
+
+@media (max-width: 768px) {
+  #content-div{
+    width: 95vw;
+    margin: auto;
+    margin-top: 0;
+  }
+
+  .bi-caret-down-fill{
+    width: 100%;
+    height: fit-content;
+    padding: 1%;
+    background-color: #02542D;
+    fill: white;
+    border-radius: 50%;
+    margin: auto;
+    cursor: pointer;
+    transition: 500ms;
+  }
+
+  #func h1{
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
 }

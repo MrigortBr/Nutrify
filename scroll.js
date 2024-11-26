@@ -2,7 +2,6 @@ let page = 1;
 
 window.addEventListener("resize", () => {sendToPage()})
 
-showTeam()
 
 document.addEventListener("wheel", (event) => {
   if (event.deltaY > 0) {
@@ -19,15 +18,19 @@ function sendToPage(){
   switch (page) {
     case 1:
       showIndex();
+      
       break;
     case 2: 
       showFunc()
+      
       break;
     case 3: 
       showFaq()
+      
       break;
     case 4: 
       showTeam()
+    
       break;
   }
 }
@@ -46,6 +49,7 @@ function showIndex() {
   document.getElementById("logo").setAttribute('attr-show-image', '0')
   noSelectedALL()
   page= 1
+  hiddenUp();
 }
 
 function showFunc() {
@@ -54,6 +58,7 @@ function showFunc() {
   noSelectedALL();
   document.getElementById("li-func").setAttribute("selected", 'true')
   page = 2
+  setUp()
 }
 
 
@@ -63,6 +68,7 @@ function showFaq() {
   noSelectedALL()
   document.getElementById("li-faq").setAttribute("selected", 'true')
   page = 3
+  setUp()
 }
 
 
@@ -72,4 +78,13 @@ function showTeam() {
   noSelectedALL()
   document.getElementById("li-team").setAttribute("selected", 'true')
   page = 4
+  setUp()
+}
+
+function setUp(params) {
+  document.getElementById("up").setAttribute("showUp", "true")
+}
+
+function hiddenUp(params) {
+  document.getElementById("up").setAttribute("showUp", "false")
 }
