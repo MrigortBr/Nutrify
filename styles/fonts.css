@@ -32,12 +32,16 @@ header ul li{
   font-size: 3vw;
 }
 
-.content-benefits h2{
+.content-benefits-title{
   font-size: 2vw;
 }
 
-#questions h1{
+.question-title{
   font-size: 2vw;
+}
+
+.question-desc{
+  font-size: 1.5vw;
 }
 
 .user-name{
@@ -47,6 +51,12 @@ header ul li{
 .user-function{
   font-size: 1.2vw;
 }
+
+.content-benefits-paragraph{
+  font-size: 1.8vw;
+}
+
+
 
 @media (max-width: 768px) {
   header ul li{
@@ -80,4 +90,25 @@ header ul li{
   .user-function{
     font-size: 2.4vw;
   }
+
+  #func h1{
+    font-size: 10vw;
+  }
+
+  .content-benefits-title{
+    font-size: 5vw;
+  }
+
+  .content-benefits-paragraph{
+    font-size: 4.8vw;
+  }
+
+  .question-title{
+    font-size: 3vw;
+  }
+  
+  .question-desc{
+    font-size: 2.8vw;
+  }
+  
 }

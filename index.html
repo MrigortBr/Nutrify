@@ -17,7 +17,12 @@
   <link rel="stylesheet" href="./styles/team.css">
 </head>
 <body>
-  <img src="./public/svg/logo.svg" alt="" id="logo" attr-show-image="0">
+  <img onclick="showIndex()" src="./public/svg/logo.svg" alt="" id="logo" attr-show-image="0">
+  <button id="up" onclick="showIndex()" showUp="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+    </svg>
+    </button>
   <header>
     <ul>
       <li onclick="showFunc()" selected="false" id="li-func">Funcionalidades</li>
@@ -36,7 +41,7 @@
             <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="rgba(44, 133, 14, 1)" />
           </filter>
         </defs>
-        <path fill="#2C850E" transform="translate(100 100)" filter="url(#shadow)">
+        <path fill="#02542D" transform="translate(100 100)" filter="url(#shadow)">
           <animate attributeName="d" dur="8s" repeatCount="indefinite" values="
           M45.1,-47.2C59.8,-41.4,74.1,-28.5,78.6,-12.4C83.2,3.6,78,22.8,68.8,40.8C59.7,58.7,46.6,75.5,30.3,80.1C13.9,84.7,-5.7,77.1,-24.8,69.5C-43.8,61.9,-62.4,54.3,-71.4,40.4C-80.4,26.5,-79.9,6.2,-73.1,-9.6C-66.4,-25.4,-53.5,-36.9,-40.3,-42.9C-27,-49,-13.5,-49.7,0.8,-50.7C15.2,-51.7,30.3,-52.9,45.1,-47.2Z;
           M47.1,-52C63.5,-42.3,80.9,-29.8,80.6,-16.4C80.3,-3,62.4,11.3,50.8,27.4C39.2,43.4,34,61.2,22.4,68.2C10.9,75.3,-6.9,71.6,-25.5,66.4C-44.2,61.3,-63.7,54.7,-70.9,41.4C-78.1,28.1,-72.9,8.1,-67.9,-10.5C-62.9,-29.1,-58,-46.2,-46.7,-56.8C-35.4,-67.4,-17.7,-71.4,-1.2,-70C15.3,-68.6,30.7,-61.7,47.1,-52Z;
@@ -51,7 +56,7 @@
     </div>
     <div class="blob" id="linkedin">
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#2C850E" transform="translate(100 100)" filter="url(#shadow)">
+        <path fill="#02542D" transform="translate(100 100)" filter="url(#shadow)">
           <animate attributeName="d" dur="8s" repeatCount="indefinite" values="
           M49.6,-63.1C57.9,-52.2,53.7,-30.5,54.4,-11.8C55,6.9,60.4,22.4,55.9,34C51.3,45.6,36.7,53.2,20.6,61.1C4.4,69,-13.4,77.3,-24.4,71.4C-35.5,65.5,-40,45.6,-45.9,29.4C-51.8,13.2,-59.3,0.7,-61.9,-15.5C-64.4,-31.6,-62.2,-51.5,-51,-61.9C-39.9,-72.2,-20,-73.1,0.4,-73.6C20.7,-74,41.4,-74,49.6,-63.1Z;
           M49.6,-63.1C57.9,-52.2,53.7,-30.5,54.4,-11.8C55,6.9,60.4,22.4,55.9,34C51.3,45.6,36.7,53.2,20.6,61.1C4.4,69,-13.4,77.3,-24.4,71.4C-35.5,65.5,-40,45.6,-45.9,29.4C-51.8,13.2,-59.3,0.7,-61.9,-15.5C-64.4,-31.6,-62.2,-51.5,-51,-61.9C-39.9,-72.2,-20,-73.1,0.4,-73.6C20.7,-74,41.4,-74,49.6,-63.1Z;
@@ -68,7 +73,7 @@
     </div>
     <div class="blob" id="email">
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#2C850E" transform="translate(100 100)" filter="url(#shadow)">
+        <path fill="#02542D" transform="translate(100 100)" filter="url(#shadow)">
           <animate attributeName="d" dur="8s" repeatCount="indefinite" values="
           M37.5,-43.1C50.1,-34.1,62.9,-23.7,65.9,-11C68.8,1.7,61.9,16.7,54.4,33.1C47,49.6,39,67.4,25.9,72.9C12.9,78.3,-5.3,71.4,-21.2,63.4C-37,55.3,-50.6,46.2,-56.9,33.6C-63.2,21.1,-62.3,5.1,-61.5,-12.8C-60.7,-30.7,-59.9,-50.6,-49.7,-60.1C-39.4,-69.6,-19.7,-68.7,-3.6,-64.3C12.4,-60,24.9,-52.2,37.5,-43.1Z;
           M51.3,-60.3C64.3,-50.2,71.1,-32,72.2,-14.4C73.3,3.2,68.7,20.1,59.3,32.1C49.8,44.1,35.5,51.2,21.7,53.7C7.9,56.1,-5.5,53.9,-17.5,49.1C-29.5,44.3,-40.2,36.8,-52.7,25.4C-65.2,14,-79.6,-1.3,-79.7,-16.4C-79.9,-31.6,-65.9,-46.7,-50.2,-56.3C-34.6,-65.9,-17.3,-70.1,0.9,-71.2C19.2,-72.3,38.3,-70.4,51.3,-60.3Z;
@@ -128,19 +133,31 @@
     </svg>
     <h1>BENEFÍCIOS</h1>
     <div id="content-div">
-      <div class="content-benefits">
-        <h2>Melhora saude</h2>
+      <svg xmlns="http://www.w3.org/2000/svg" onclick="pastSlide()" width="16" height="16" fill="currentColor" id="arrow-left" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+      </svg>     
+      <div id="carrousel">
+        <div class="content-benefits" show-this="true">
+          <h2 class="content-benefits-title">O nutrify ajuda na sua saude</h2>
+          <h2 class="content-benefits-paragraph">Com o sistema do nutrify nos te auxiliamos a chegar a sua melhor versão</h2>
+        </div>
+        <div class="content-benefits" show-this="false">
+          <h2 class="content-benefits-title">Melhora saude 2</h2>
+          <h2 class="content-benefits-paragraph">O nutrify ajuda coamdsasodasodasodasodaosdoasdoaso</h2>
+        </div>
+        <div class="content-benefits" show-this="false">
+          <h2 class="content-benefits-title">Melhora saude 3</h2>
+          <h2 class="content-benefits-paragraph">O nutrify ajuda coamdsasodasodasodasodaosdoasdoaso</h2>
+        </div>
+        <div class="content-benefits" show-this="false">
+          <h2 class="content-benefits-title">Melhora saude 4</h2>
+          <h2 class="content-benefits-paragraph">O nutrify ajuda coamdsasodasodasodasodaosdoasdoaso</h2>
+        </div>
       </div>
-      <div class="content-benefits">
-        <h2>Melhora saude</h2>
-      </div>
-
-      <div class="content-benefits">
-        <h2>Melhora saude</h2>
-      </div>
-      <div class="content-benefits">
-        <h2>Melhora saude</h2>
-      </div>
+      <svg xmlns="http://www.w3.org/2000/svg"  onclick="nextSlide()" width="16" height="16" fill="currentColor" id="arrow-right" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+      </svg>
+        
     </div>
   </main>
   <!-- <main id="contact" class="content"></main> -->
@@ -173,25 +190,30 @@
     </svg>
     <h1 id="faq-title">Perguntas frequentes</h1>
     <div id="questions">
-      <div class="question">
+      <div class="question" onclick="openSpan(this)">
         <h1 class="question-title">Quanto eu tenho que pagar para poder utilizar o programa?</h1>
-        <img src="./public/svg/caret.svg" alt="">
+        <img class="question-arrow" src="./public/svg/caret.svg" alt="" show="false">
+        <span class="question-desc" show="false">Você não precisa pagar nada para pode utilizar o nutrify</span>
       </div>
-      <div class="question">
+      <div class="question" onclick="openSpan(this)">
         <h1 class="question-title">Quanto eu tenho que pagar para poder utilizar o programa?</h1>
-        <img src="./public/svg/caret.svg" alt="">
+        <img class="question-arrow" src="./public/svg/caret.svg" alt="" show="false">
+        <span class="question-desc" show="false">Você não precisa pagar nada para pode utilizar o nutrify</span>
       </div>
-      <div class="question">
+      <div class="question" onclick="openSpan(this)">
         <h1 class="question-title">Quanto eu tenho que pagar para poder utilizar o programa?</h1>
-          <img src="./public/svg/caret.svg" alt="">
+        <img class="question-arrow" src="./public/svg/caret.svg" alt="" show="false">
+        <span class="question-desc" show="false">Você não precisa pagar nada para pode utilizar o nutrify</span>
       </div>
-      <div class="question">
+      <div class="question" onclick="openSpan(this)">
         <h1 class="question-title">Quanto eu tenho que pagar para poder utilizar o programa?</h1>
-        <img src="./public/svg/caret.svg" alt="">
+        <img class="question-arrow" src="./public/svg/caret.svg" alt="" show="false">
+        <span class="question-desc" show="false">Você não precisa pagar nada para pode utilizar o nutrify</span>
       </div>
-      <div class="question">
+      <div class="question" onclick="openSpan(this)">
         <h1 class="question-title">Quanto eu tenho que pagar para poder utilizar o programa?</h1>
-        <img src="./public/svg/caret.svg" alt="">
+        <img class="question-arrow" src="./public/svg/caret.svg" alt="" show="false">
+        <span class="question-desc" show="false">Você não precisa pagar nada para pode utilizar o nutrify</span>
       </div>
     </div>
     <ul></ul>
@@ -250,14 +272,14 @@
       </div>
       <div class="user" id="guilherme">
         <img class="user-picture" src="./public/images/user.jpg" alt="">
-        <h2 class="user-name"></h2>
+        <h2 class="user-name">Guilherme</h2>
         <p class="user-function">Desenvolvedor</p>
         <img class="user-linkedin" src="./public/svg/linkedin.svg" alt="">
         <img class="user-curriculum" src="./public/svg/user.svg" alt="">
       </div>
       <div class="user" id="alan">
         <img class="user-picture" src="./public/images/user.jpg" alt="">
-        <h2 class="user-name"></h2>
+        <h2 class="user-name">Alan</h2>
         <p class="user-function">Designer de UX/UI</p>
         <img class="user-linkedin" src="./public/svg/linkedin.svg" alt="">
         <img class="user-curriculum" src="./public/svg/user.svg" alt="">
@@ -271,7 +293,7 @@
       </div>
       <div class="user" id="andre">
         <img class="user-picture" src="./public/images/user.jpg" alt="">
-        <h2 class="user-name"></h2>
+        <h2 class="user-name">André</h2>
         <p class="user-function">Analista de requisitos</p>
         <img class="user-linkedin" src="./public/svg/linkedin.svg" alt="">
         <img class="user-curriculum" src="./public/svg/user.svg" alt="">

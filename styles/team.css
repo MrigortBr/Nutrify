@@ -119,11 +119,11 @@
   }
   
   #team-background{
-    height: 70vh;
+    height: 60vh;
     position: relative;
     top: 0;
     left: 0;
-    margin-top: -30vh;
+    margin-top: -10vh;
   }
 
   .user{
@@ -143,6 +143,7 @@
   #igor{
     margin-right: auto;
     margin-left: 0;
+    margin-top: 0vh;
   }
 
   #guilherme{
