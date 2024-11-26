@@ -47,3 +47,37 @@ header ul li{
 .user-function{
   font-size: 1.2vw;
 }
+
+@media (max-width: 768px) {
+  header ul li{
+    font-size: 3vw;
+  }
+
+  #background-text h1{
+    font-size: 13vw;
+  }
+
+  #background-text h1 ct{
+    font-size: 15vw;
+  }
+
+  #background-text h2{
+    font-size: 4vw;
+  }
+  
+  #background-text h3{
+    font-size: 3vw;
+  }
+
+  #init{
+    font-size: 5vw;
+  }
+
+  .user-name{
+    font-size: 3vw;
+  }
+  
+  .user-function{
+    font-size: 2.4vw;
+  }
+}

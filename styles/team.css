@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   position: relative;
   grid-template-rows: 30vh 70vh;
-  
 }
 
 #team #wave{
@@ -29,8 +28,6 @@
   flex-wrap: wrap;
 
 }
-
-
 
 .user{
   display: grid;
@@ -102,4 +99,71 @@
   margin: auto;
   margin-top: 5px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  
+  #team{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #team-title{
+    width: 100%;
+    text-align: center;
+    height: 10vh;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 10vh;
+    color: #02542D;
+  }
+  
+  #team-background{
+    height: 70vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: -10vh;
+  }
+
+  .user{
+    width: 70%;
+    height: 10vh;
+    margin-top: 1vh;
+  }
+
+  .user-linkedin{
+    width: 30%;
+  }
+
+  .user-curriculum{
+    width: 30%;
+  }
+
+  #igor{
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  #guilherme{
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  #alan{
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+
+
+  #jaci{
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  #andre{
+    margin-right: auto;
+    margin-left: 0;
+  }
 }
