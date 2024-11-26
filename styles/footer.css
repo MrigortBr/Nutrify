@@ -25,9 +25,14 @@ footer{
 }
 
 @media (max-width: 768px) {
-  .blob > svg{
+  .blob{
+    width: fit-content;
     height: fit-content;
+  }
+
+  .blob > svg{
     width: 16vw;
+    height: 16vw;
     cursor: pointer;
     transition: box-shadow 10s ease;
   }
@@ -38,5 +43,6 @@ footer{
     top: 90vh;
     height: 100%;
     align-items: center;
+    height: 16vw;
   }
 }
