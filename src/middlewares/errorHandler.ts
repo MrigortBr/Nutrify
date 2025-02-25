@@ -10,6 +10,11 @@ export let descErrors: DescErrors = {
     description: "Houve um erro ao tentar realizar sua solicitação tente novamente mais tarde.",
     statusCode: 400,
   },
+  "PE-NLTA": {
+    message: "Você precisa estar logado!",
+    description: "Você precisa estar logado, para pode acessar esta pagina.",
+    statusCode: 400,
+  },
 };
 
 export interface ErrorResponse {

@@ -22,9 +22,10 @@ class UserModel {
     }
   }
 
-  async registerUser(user: IRegisterUser): Promise<number> {
+  async registerUser(user: IRegisterUser): Promise<{ id: number }> {
     try {
-      return await this.db("users").insert(user).returning("id");
+      const result = await this.db("users").insert(user).returning("id");
+      return result[0];
     } catch (error) {
       if (typeof (error as { code: string }).code == "string") {
         const code = (error as { code: string }).code;

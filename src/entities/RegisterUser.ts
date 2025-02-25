@@ -1,5 +1,6 @@
 import bcrypt from "bcryptjs";
 import { hashPasswordByPassword } from "../base/ServiceAll";
+import { EmailModule } from "../base/emailModule";
 
 interface IRegisterUser {
   name: string;
@@ -11,11 +12,13 @@ class RegisterUser implements IRegisterUser {
   name: string;
   email: string;
   password: string;
+  username: string;
 
   private constructor(name: string, email: string, password: string) {
     this.name = name;
     this.email = email;
     this.password = password;
+    this.username = `${name.replace(/\s+/g, "")}${email.charAt(2)}`.slice(0, 15);
   }
 
   static async create(tempUser: IRegisterUser): Promise<RegisterUser> {
@@ -44,6 +47,14 @@ class RegisterUser implements IRegisterUser {
     if (!isNameValid) throw new Error("PE-IFLR-NA");
     if (!isEmailValid) throw new Error("PE-IFLR-EM");
     if (!isPasswordValid) throw new Error("PE-IFLR-PW");
+  }
+
+  async sayWelcome() {
+    if (this.email != undefined) {
+      new EmailModule(this.email, "welcome.html", "Bem vindo ao nutrify", {
+        name: this.name,
+      }).sendEmail();
+    }
   }
 }
 

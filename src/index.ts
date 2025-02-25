@@ -20,7 +20,7 @@ class Server {
   }
 
   private loadConfig() {
-    this.app.use(express.json());
+    this.app.use(express.json({ limit: "10mb" }));
     this.app.use(cors());
   }
 

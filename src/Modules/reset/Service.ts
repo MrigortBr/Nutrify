@@ -1,4 +1,5 @@
 import { hashPasswordByPassword, isValidEmail } from "../../base/ServiceAll";
+import { EmailModule } from "../../base/emailModule";
 import { ReturnResponse } from "../../base/responsesData";
 import DatabaseConnection from "../../data/connection";
 import PasswordReset from "../../entities/PasswordReset";

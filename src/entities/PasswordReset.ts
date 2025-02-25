@@ -2,6 +2,7 @@ import crypto from "crypto";
 import fs from "fs";
 import path from "path";
 import nodemailer from "nodemailer";
+import { EmailModule } from "../base/emailModule";
 
 export default class PasswordReset {
   id?: number;
@@ -28,28 +29,11 @@ export default class PasswordReset {
   }
 
   async sendEmail() {
-    const templatePath = path.join(__dirname, "../../pages/email_template.html");
-    let emailHtml = fs.readFileSync(templatePath, "utf-8");
-
-    emailHtml = emailHtml
-      .replace("{{name}}", this.name || "Usuario")
-      .replace("{{reset_link}}", `${process.env.PAGE_RESET_EMAIL}${this.token}` || "http://localhost:3000/login/token");
-
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: "nutrify.comercial25@gmail.com",
-        pass: process.env.PWD_GMAIL,
-      },
-    });
-
-    const mailOptions = {
-      from: "nutrify.comercial25@gmail.com",
-      to: this.email,
-      subject: "Redefinição de Senha do nutrify",
-      html: emailHtml,
-    };
-
-    await transporter.sendMail(mailOptions);
+    if (this.email != undefined && this.token != undefined) {
+      new EmailModule(this.email, "reset_email.html", "Redefinição de Senha do nutrify", {
+        name: this.name,
+        reset_link: `${process.env.PAGE_RESET_EMAIL}${this.token}`,
+      }).sendEmail();
+    }
   }
 }

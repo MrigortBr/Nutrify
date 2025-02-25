@@ -6,6 +6,7 @@ import { SendedUser } from "../../entities/SendedUser";
 import { UserModel } from "./Model";
 import { responseLogin, returnResponse } from "./Responses";
 import "./erros";
+import jwt from "jsonwebtoken";
 
 export class AuthenticateService {
   private model: UserModel;
@@ -41,7 +42,8 @@ export class AuthenticateService {
       password: password,
     });
     const idUser = await this.model.registerUser(registerUser);
-    const jwtKey = await generateKeyJWT(idUser);
+    registerUser.sayWelcome();
+    const jwtKey = await generateKeyJWT(idUser.id);
     const response = returnResponse["AC_PR_RASU"];
     response.jwt = jwtKey;
     return response;
